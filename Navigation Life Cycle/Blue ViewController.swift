@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Blue ViewController.swift
 //  Navigation Life Cycle
 //
 //  Created by Hiếu Nguyễn on 7/10/18.
@@ -8,49 +8,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Blue_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("VIEW 1: DID LOAD")
+
+        print("VIEW 2: DID LOAD")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("VIEW 1: WILL APPEAR")
-
+        print("VIEW 2: WILL APPEAR")
+        
     }
     
     // Appear
     override func viewDidAppear(_ animated: Bool) {
-        print("VIEW 1: DID APPEAR")
+        print("VIEW 2: DID APPEAR")
     }
     override func viewWillDisappear(_ animated: Bool) {
-        print("VIEW 1: WILL DISAPPEAR")
+        print("VIEW 2: WILL DISAPPEAR")
     }
     
     // Disappear
     override func viewDidDisappear(_ animated: Bool) {
-        print("VIEW 1: DID DISAPPEAR")
+        print("VIEW 2: DID DISAPPEAR")
     }
-    
-    @IBAction func GOTO_BLUE(_ sender: Any) {
-        // Storyboard
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        // Tao man hinh xanh
-        let manhinh2 = sb.instantiateViewController(withIdentifier: "MAUXANH") as! Blue_ViewController
-        
-        // Navigation Push
-        self.navigationController?.pushViewController(manhinh2, animated: true)
-        
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
